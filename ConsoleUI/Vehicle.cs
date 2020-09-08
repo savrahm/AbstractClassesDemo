@@ -14,7 +14,7 @@ namespace ConsoleUI
 
         public virtual void DriveVirtual()
         {
-            {Console.WriteLine($"Now driving this {GetType().Name}: {Year} {Make} {Model}");
+            Console.WriteLine($"Now driving this {GetType().Name}: {Year} {Make} {Model}");
         }
     }
 }

@@ -15,7 +15,5 @@ namespace ConsoleUI
                 Console.WriteLine("Buckle up");
             }
         }
-
-        public
     }
 }

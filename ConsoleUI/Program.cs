@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace ConsoleUI
 {
@@ -42,17 +43,34 @@ namespace ConsoleUI
              */
 
             Car focus = new Car() { HasSeatBelts = true, Make = "Ford", Model = "Focus", Year = "2013" };
-            Motorcycle mototcycle = new Motorcycle() { HasSideCar = false, Make = "Ace", Model = "XP-4", Year = "1923" };
+            Motorcycle motorcycle = new Motorcycle() { HasSideCar = false, Make = "Ace", Model = "XP-4", Year = "1923" };
 
             Vehicle sedan = new Car() { Make = "Dodge", Model = "Thingie", Year = "2019"};
             Vehicle sport = new Car() { HasSeatBelts = false, Make = "Ferrari", Model = "Fancy", Year = "2021" };
 
             /*
-             * Add the 4 vehicles to the list
-             * Using a foreach loop iterate over each of the properties
+             * Done - Add the 4 vehicles to the list
+             * Done - Using a foreach loop iterate over each of the properties
              */
 
-            // Call each of the drive methods for one car and one motorcycle
+            vehicles.Add(sedan);
+            vehicles.Add(sport);
+            vehicles.Add(focus);
+            vehicles.Add(motorcycle);
+
+            foreach (var veh in vehicles)
+            {
+                Console.WriteLine($"{veh.Year} {veh.Make} {veh.Model}.");
+                //veh.DriveAbstract();
+                //veh.DriveVirtual();
+                //Console.WriteLine("__________________________________");
+            }
+
+            // Done - Call each of the drive methods for one car and one motorcycle
+
+            motorcycle.DriveVirtual();
+            sedan.DriveAbstract();
+
 
             #endregion            
             Console.ReadLine();
