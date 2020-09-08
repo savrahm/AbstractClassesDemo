@@ -18,7 +18,7 @@ namespace ConsoleUI
 
         public override void DriveVirtual()
         {
-            Console.WriteLine("Now driving this 1972 Ducati 450 Desmo Racer");
+            Console.WriteLine($"Now driving this {GetType().BaseType.Name} which is a {GetType().Name}.");
         }
     }
 }
